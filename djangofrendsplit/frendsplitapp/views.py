@@ -17,3 +17,6 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'frendsplitapp/signup.html', {'form': form})
+
+def learn_more(request):
+    return render(request, 'frendsplitapp/learn_more.html')
