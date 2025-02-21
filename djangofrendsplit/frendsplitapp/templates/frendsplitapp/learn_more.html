@@ -1,0 +1,46 @@
+{% extends 'frendsplitapp/base.html' %} {% block title %}Learn More -
+FrendSplit{% endblock %} {% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1 class="display-4 mb-4 text-center">How FrendSplit Works</h1>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Share Expenses Easily</h2>
+          <p>
+            Add expenses and split them among your friends. FrendSplit
+            automatically calculates who owes what.
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Create Groups</h2>
+          <p>
+            Organize expenses by creating groups for roommates, trips, or
+            events. Keep everything organized in one place.
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Track Balances</h2>
+          <p>
+            See who you owe and who owes you at a glance. Settle up with
+            confidence knowing all expenses are tracked.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="{% url 'signup' %}" class="btn btn-primary btn-lg"
+          >Get Started</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
