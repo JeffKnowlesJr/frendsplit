@@ -43,3 +43,11 @@ This project is in early development stages.
 ## License
 
 MIT License
+
+## Development Log
+
+### 2024-03-17
+
+- Fix URL and model conflicts
+  - Remove duplicate admin URL from frendsplitapp/urls.py to resolve namespace conflict
+  - Change Group.members related_name from 'groups' to 'frendsplit_groups' to avoid collision with Django's built-in User.groups field
