@@ -20,10 +20,18 @@ endblock %} {% block content %}
             aria-label="Close"
           ></button>
         </div>
-        {% endif %}
+        {% endif %} {% if next %} {% if user.is_authenticated %}
+        <div class="alert alert-warning">
+          Your account doesn't have access to this page. To proceed, please
+          login with an account that has access.
+        </div>
+        {% else %}
+        <div class="alert alert-info">Please login to see this page.</div>
+        {% endif %} {% endif %}
 
         <form method="post" action="{% url 'login' %}">
           {% csrf_token %}
+
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input
@@ -54,11 +62,6 @@ endblock %} {% block content %}
         </form>
 
         <div class="mt-4 text-center">
-          <p class="mb-2">
-            <a href="{% url 'password_reset' %}" class="text-muted"
-              >Forgot your password?</a
-            >
-          </p>
           <p class="mb-0">
             Don't have an account?
             <a href="{% url 'signup' %}" class="text-primary">Sign Up</a>
